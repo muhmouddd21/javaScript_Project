@@ -1,0 +1,16 @@
+.social-icon {
+  transition: color 0.3s ease;
+  color: #6c757d;
+}
+
+.social-icon.facebook:hover {
+  color: #3b5998;
+}
+
+.social-icon.instagram:hover {
+  color: #e4405f;
+}
+
+.social-icon.tiktok:hover {
+  color: #000000;
+}
