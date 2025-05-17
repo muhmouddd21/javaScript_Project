@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Label Form</title>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style/form.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <h1>Your Website Content</h1>
+      <p>This is where your existing content goes.</p>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <div class="registration-title" id="form-title">
+        REGISTER
+        <i class="bi bi-x-lg"></i>
+      </div>
+
+      <!-- Register Form -->
+      <form id="register-form">
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder=" " required />
+          <label class="form-label">First Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-input" placeholder=" " required />
+          <label class="form-label">Last Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-input" placeholder=" " required />
+          <label class="form-label"
+            >Email <span class="required">*</span></label
+          >
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-input" placeholder=" " required />
+          <label class="form-label"
+            >Password <span class="required">*</span></label
+          >
+        </div>
+
+        <button type="submit" class="register-btn">Register</button>
+
+        <div class="login-text">
+          Already have an account? <a id="show-login">Login here</a>
+        </div>
+      </form>
+
+      <!-- Login Form -->
+      <form id="login-form" class="hidden">
+        <div class="form-group">
+          <input type="email" class="form-input" placeholder=" " required />
+          <label class="form-label"
+            >Email <span class="required">*</span></label
+          >
+        </div>
+
+        <div class="form-group">
+          <input type="password" class="form-input" placeholder=" " required />
+          <label class="form-label"
+            >Password <span class="required">*</span></label
+          >
+        </div>
+
+        <button type="submit" class="register-btn">Login</button>
+
+        <div class="login-text">
+          Don't have an account? <a id="show-register">Register here</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const showLogin = document.getElementById("show-login");
+      const showRegister = document.getElementById("show-register");
+      const registerForm = document.getElementById("register-form");
+      const loginForm = document.getElementById("login-form");
+      const formTitle = document.getElementById("form-title");
+
+      showLogin.addEventListener("click", () => {
+        registerForm.classList.add("hidden");
+        loginForm.classList.remove("hidden");
+        formTitle.firstChild.textContent = "LOGIN";
+      });
+
+      showRegister.addEventListener("click", () => {
+        loginForm.classList.add("hidden");
+        registerForm.classList.remove("hidden");
+        formTitle.firstChild.textContent = "REGISTER";
+      });
+    </script>
+  </body>
+</html>

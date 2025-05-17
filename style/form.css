@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 350px;
+  background: white;
+  padding: 30px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.registration-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 12px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background: white;
+  padding: 0 4px;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #2a6d6d;
+}
+
+.form-label .required {
+  color: red;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #2a6d6d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.register-btn:hover {
+  background-color: #1e4d4d;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.login-text a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bi-x-lg {
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+.bi-x-lg:hover {
+  transform: rotate(360deg);
+}
+
+.hidden {
+  display: none;
+}
