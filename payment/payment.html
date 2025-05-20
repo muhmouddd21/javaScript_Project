@@ -348,7 +348,7 @@
             });
         });
         
-        // Listen to card element changes
+        // Listen to card element changes ,,, using arrow function and destructuring  (ES6)
         cardElement.on('change', ({error}) => {
             const displayError = document.getElementById('card-errors');
             if (error) {
@@ -359,6 +359,8 @@
                 displayError.style.display = 'none';
             }
         });
+     
+
         
         // Input field validation on blur
         const inputFields = document.querySelectorAll('.form-control, .form-select');
@@ -448,3 +450,4 @@
     </script>
 </body>
 </html>
+

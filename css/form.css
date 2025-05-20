@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: var(--font-body-family, 'Poppins', sans-serif);
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--t4s-body-background, #fff);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  width: 350px;
+  background: var(--t4s-light-color, #fff);
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+.registration-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--heading-color, #222);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.25rem;
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background: var(--t4s-light-color, #fff);
+}
+
+.form-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 1rem;
+  color: var(--text-color, #999);
+  pointer-events: none;
+  background: var(--t4s-light-color, #fff);
+  padding: 0 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -0.6rem;
+  left: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--accent-color, #2a6d6d);
+}
+
+.form-label .required {
+  color: var(--t4s-error-color, red);
+}
+
+.register-btn {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--accent-color, #2a6d6d);
+  color: var(--t4s-light-color, #fff);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: var(--accent-color-hover, #153636);
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-color, #555);
+}
+
+.login-text a {
+  color: var(--link-color, #333);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-text a:hover {
+  color: var(--link-color-hover, #2a6d6d);
+}
+
+.bi-x-lg {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bi-x-lg:hover {
+  transform: rotate(90deg);
+}
+
+.hidden {
+  display: none;
+}
